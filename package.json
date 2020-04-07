@@ -1,6 +1,6 @@
 {
   "name": "aws-terraform-managed-infrastructure",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provisioning and managing AWS infrastructure via Terraform.",
   "repository": {
     "type": "git",
