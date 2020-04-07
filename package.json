@@ -1,0 +1,15 @@
+{
+  "name": "aws-terraform-managed-infrastructure",
+  "version": "0.0.1",
+  "description": "Provisioning and managing AWS infrastructure via Terraform.",
+  "repository": {
+    "type": "git",
+    "url": "https://singhakumar@bitbucket.org/singhakumar/aws-terraform-managed-infrastructure.git"
+  },
+  "author": "Amit Kumar <singhakumar.18@gmail.com> (https://bitbucket.org/singhakumar/)",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/singhakumar/aws-terraform-managed-infrastructure/src/master/README.md",
+  "devDependencies": {
+    "aws-sdk": "^2.654.0"
+  }
+}
