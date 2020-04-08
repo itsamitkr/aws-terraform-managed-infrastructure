@@ -1,5 +1,3 @@
-data "aws_caller_identity" "current" {}
-
 resource "aws_security_group" "security-group-private" {
   name        = "${var.environment}-security-group-private"
   description = "Allows traffic to private subnet"

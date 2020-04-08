@@ -1,5 +1,3 @@
-data "aws_caller_identity" "current" {}
-
 resource "aws_dynamodb_table" "dynamo-db" {
   name            = "${var.environment}-dynamo-db"
   billing_mode    = var.billing_mode
