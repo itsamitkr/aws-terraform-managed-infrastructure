@@ -1,5 +1,3 @@
-variable "account_id" {}
-
 variable "environment" {}
 
 variable "cidr_block" {

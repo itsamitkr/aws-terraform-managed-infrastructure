@@ -5,3 +5,7 @@ output "security-group-private-out" {
 output "security-group-public-out" {
   value = aws_security_group.security-group-public.id
 }
+
+output "security-group-rds" {
+  value = aws_security_group.security-group-rds.id
+}
