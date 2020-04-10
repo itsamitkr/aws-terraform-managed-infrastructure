@@ -1,10 +1,13 @@
-# AWS managed Infrastructure through Terraform
+# AWS managing infrastructure through Terraform
 
-The purpose of this project is to provision and manage AWS infrastructure as code (IaC). The project is leveraging Terraform modules to create the resources. The modular architecture maintains the code in separate folder so as the number of resource and/ complexity grows maintainability doesn't become an issue.  All the modules are registered in `terraform --> main.tf`, which provides a centralized configuration for choosing which resource should/ shouldn't be provisioned.
+The purpose of this project is to provision and manage AWS infrastructure as code (IaC). The project is configured to use Terraform `modules` to create AWS Resources. The modular architecture allows resources to be encapsulated in it's module and changes to a module doesn't directly affect resources maintained in other modules. Also, when the number of resources or infrastructure complexity maintainability doesn't becomes an issue. 
+
+All the modules are registered with root module's `main.tf`. It provides a centralized configuration for choosing which resource should/ shouldn't be provisioned. The architecture diagram catalogs all the resources created by this project.
 
 ![AWS Infastructure Lucidchart](./terraform/static/aws-infrastructure.png)
 
-Benefits of this project:
+Benefits of the project:
+
 1. **Operational Excellence** - The `environment variables` allows you to replicate the resources across different project environment such as `pord`, `test`, `dev` etc. 
 2. **Security** - Security best-practices are unified in templates/ JSON files which can be easily edited and reused multiple times.
 3. **Reliability** - The resource states stored in an S3 bucket, so any unwanted manual changes to the resources can be easily identified and reverted back. Changes to the IaC can tagged in `package.json` through `npn-version [patch|minor|major]` and version controlled by Git.
@@ -12,7 +15,7 @@ Benefits of this project:
 
 
 ## Prerequisites
-Create a `~/.bash_profile` and add `access-key`, `secret-key` and `aws-region` and  as environment variables.
+Create a `~/.bash_profile` to add environment variables.
 ~~~
 AWS_ACCESS_KEY_ID="access-key"
 AWS_SECRET_ACCESS_KEY="secret-key"
@@ -43,6 +46,7 @@ List the resources to be created via the script. Allows users to review, before 
 terrafomm plan
 ~~~
 The command will also prompt you to provide:
+
 * account_id
 * environment
 * rds_username
