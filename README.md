@@ -1,4 +1,4 @@
-# AWS managing infrastructure through Terraform
+# Managing AWS infrastructure through Terraform
 
 The purpose of this project is to provision and manage AWS infrastructure as code (IaC). The project is configured to use Terraform `modules` to create AWS Resources. The modular architecture allows resources to be encapsulated in it's module and changes to a module doesn't directly affect resources maintained in other modules. Also, when the number of resources or infrastructure complexity maintainability doesn't becomes an issue. 
 
